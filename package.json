@@ -1,0 +1,24 @@
+{
+  "name": "trynode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "request": "^2.73.0",
+    "supervisor": "^0.11.0",
+    "winston": "^2.2.0"
+  }
+}

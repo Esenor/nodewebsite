@@ -6,7 +6,6 @@ module.exports = {
    */
   register: function (application) {
     application.get(this.scope + '/', this.indexRoute);
-    application.get(this.scope + '/hello/:name', this.helloRoute);
   },
   /**
    * Execute et traite la route lors de son appel
@@ -14,15 +13,11 @@ module.exports = {
    * @param Response response
    */
   indexRoute: function (request, response) {
-    response.render('index/index.twig', {'msg': 'twindex.'});
-  },
-  /**
-   * Execute et traite la route lors de son appel
-   * @param Request request
-   * @param Response response
-   */
-  helloRoute: function (request, response) {
-    var res = 'Hello ' + request.params.name;
-    response.render('index/index.twig', {'msg': res});
+    var renderer = request.app.get('renderer');
+    var viewPath = 'index/index';
+    var viewParams = {msg: 'index'};
+    var viewOutput = renderer.render(viewPath, viewParams);
+    response.writeHead(200, { 'Content-Type': 'text/html' });
+    response.end(viewOutput);
   }
 }

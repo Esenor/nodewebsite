@@ -1,0 +1,15 @@
+version: '2'
+services:
+  dev:
+    container_name: trynode
+    hostname: trynode
+    image: efc/trynode
+    build: .
+    ports:
+      - "50300:80"
+    volumes:
+      - ./src/:/usr/src/app/src
+      - ./public/:/usr/src/app/public
+      - ./test/:/usr/src/app/test
+      - ./views/:/usr/src/app/views
+    command: ["npm", "start"]

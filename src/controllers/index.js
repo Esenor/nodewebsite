@@ -28,7 +28,7 @@ module.exports = {
    */
   helloRoute: function (request, response) {
     var renderer = request.app.get('renderer');
-    var viewPath = 'index/index';
+    var viewPath = 'index/hello';
     var viewParams = {msg: 'hello ' + request.params.name};
     var viewOutput = renderer.render(viewPath, viewParams);
     response.writeHead(200, { 'Content-Type': 'text/html' });

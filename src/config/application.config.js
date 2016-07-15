@@ -1,8 +1,20 @@
+/**
+ * Application configuration
+ * @type Object
+ */
 module.exports = {
   /**
-   * MicroServices à charger dans l'application. Le nom du microservice correspond
-   * au nom du module JavaScript.js
-   * @type array
+   * List of needed controllers
+   * @type Array
    */
-  controllers: ['index']
+  controllers: ['index'],
+  /**
+   * Layout default value
+   * @type Object
+   */
+  layout: {
+    variables: {
+      page_header_title: 'default title'
+    }
+  }
 }

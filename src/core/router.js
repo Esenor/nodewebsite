@@ -1,16 +1,18 @@
+/**
+ * Routing methods to register route in application
+ * @type Object
+ */
 module.exports = {
   /**
-   * Ajoute les controllers à l'application
-   * @param array controllers
-   * @param Application application
+   * Register all controllers if they are in application.config
+   * @param  string controllers
+   * @param  Application application
    * @return boolean
    */
   ventilate: function (controllers, application) {
     var allRegistered = true;
-    // Pour chaque controller
     for (var controller in controllers) {
       try {
-        // On ajoute la controller si le fichier 'controller'.js existe
         require('../controllers/' + controllers[controller] + '.js').register(application);
       } catch (e) {
         allRegistered = false;

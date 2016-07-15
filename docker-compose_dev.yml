@@ -11,5 +11,4 @@ services:
       - ./src/:/usr/src/app/src
       - ./public/:/usr/src/app/public
       - ./test/:/usr/src/app/test
-      - ./views/:/usr/src/app/views
     command: ["npm", "start"]

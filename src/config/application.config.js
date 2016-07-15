@@ -14,7 +14,8 @@ module.exports = {
    */
   layout: {
     variables: {
-      page_header_title: 'default title'
+      page_head_title: 'default title',
+      page_header_slogan: 'Hi !'
     }
   }
 }

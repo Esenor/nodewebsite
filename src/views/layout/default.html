@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page_header_title }}</title>
+  <title>{{ page_head_title }}</title>
   <link rel="stylesheet" href="/styles/default.css">
 </head>
 <body>
-  <small><img src="/1.png" width="10" height="10"/>layout {{ msg }} </small>
+  {% include 'header.html' %}
   {% block content %}{% endblock %}
 </body>
 </html>

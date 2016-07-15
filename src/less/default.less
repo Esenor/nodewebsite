@@ -1,6 +1,17 @@
-p {
-  color: grey;
-  &:hover {
-    color: black;
+header {
+  height:20px;
+  background: #999999;
+  small {
+    color: #FFFFFF;
+    font-size: 10px;
+    margin-left: 5px;
+    vertical-align: top;
+    &::before {
+      content: '<';
+      color: #FFFFFF;
+      margin-right: 3px;
+      font-size: 12px;
+      vertical-align: top;
+    }
   }
 }

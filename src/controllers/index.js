@@ -26,7 +26,7 @@ module.exports = {
     // Layout to render
     var viewPath = 'index/index';
     // Parameters to put inside the layout
-    var viewParams = {msg: 'index', page_header_title: 'ok'};
+    var viewParams = {message: 'index page', page_head_title: 'home page'};
     // Rendering the layout
     var viewOutput = renderer.render(viewPath, viewParams);
     // Send the response
